@@ -1,0 +1,11 @@
+<h2 id="title">{{ title }}</h2>
+
+<input id="changerCouleur" type="submit" value="Cliquez pour changer de couleur" [ngStyle]="{background:colorChange}" (click)="changerCouleur()">
+
+<p><strong>Exemple NgFor</strong></p>
+<p *ngFor="let valeur of valeurs; let i = index">Valeur {{i}} du tableau: {{ valeur }}</p>
+
+<p><strong>Exemple Two-way data-binding:</strong>
+<input type="text" [(ngModel)]="twowaydatabinding"/>
+{{twowaydatabinding}}
+</p>

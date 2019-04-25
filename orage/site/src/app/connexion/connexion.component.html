@@ -1,0 +1,14 @@
+<h2>Connexion</h2>
+<form #userForm="ngForm" (submit)="connexion(userForm.value)">
+  <div class="connexion-form">
+    <mat-form-field>
+      <input matInput name="email" [formControl]="email" required placeholder="Entrez votre adresse email..." [(ngModel)]="userForm.value.email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="motdepasse" type="password" [formControl]="motdepasse" required placeholder="Entrez votre mot de passe..." [(ngModel)]="userForm.value.motdepasse">
+    </mat-form-field>
+    <button [disabled]="!formValid()" id="connexion-button" mat-button>Connexion</button>
+    <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+    <mat-error *ngIf="motdepasse.invalid">{{getErrorMessageMotDePasse()}}</mat-error>
+  </div>
+</form>

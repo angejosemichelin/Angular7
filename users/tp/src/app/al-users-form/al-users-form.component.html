@@ -1,0 +1,5 @@
+<form #userForm="ngForm" (submit)="doSubmit(userForm.value)">
+  <input type="text" class="form-control" name="nom" placeholder="Nom" ngModel>
+  <input type="text" class="form-control" name="prenom" placeholder="Prenom" ngModel>
+  <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
+</form>

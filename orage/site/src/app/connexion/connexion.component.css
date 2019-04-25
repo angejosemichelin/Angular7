@@ -1,0 +1,11 @@
+.connexion-form {
+    display: flex;
+    flex-direction: column;
+}
+.connexion-form > * {
+    width: 100%;
+}
+.connexion-button {
+    text-align: center;
+    width: 100%;
+}

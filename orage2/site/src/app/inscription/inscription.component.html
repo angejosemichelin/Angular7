@@ -1,0 +1,15 @@
+<h2>Inscription</h2>
+<form #userForm="ngForm" (submit)="inscription(userForm.value.email,userForm.value.motdepasse)">
+  <div class="inscription-form">
+    <mat-form-field>
+      <input matInput name="email" [formControl]="email" required placeholder="Entrez votre adresse email..." [(ngModel)]="userForm.value.email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="motdepasse" [formControl]="motdepasse" type="password" required placeholder="Entrez votre mot de passe..." [(ngModel)]="userForm.value.motdepasse">
+    </mat-form-field>
+    <button [disabled]="!formValid()" id="inscription-button" mat-button>Inscription</button>
+    <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+    <mat-error *ngIf="motdepasse.invalid">{{getErrorMessageMotDePasse()}}</mat-error>
+    <mat-error *ngIf="errorFinal()">Cet utilisateur existe deja...</mat-error>
+  </div>
+</form>

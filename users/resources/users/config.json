@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"nom": {
+			"name": "nom",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "nom",
+			"order": 0
+		},
+		"prenom": {
+			"name": "prenom",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "prenom",
+			"order": 1
+		}
+	}
+}

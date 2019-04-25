@@ -1,0 +1,11 @@
+.inscription-form {
+    display: flex;
+    flex-direction: column;
+}
+.inscription-form > * {
+    width: 100%;
+}
+.inscription-button {
+    text-align: center;
+    width: 100%;
+}
